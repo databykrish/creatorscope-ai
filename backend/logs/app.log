@@ -1,0 +1,254 @@
+2026-05-15 00:04:44 - main - INFO - Environment: development
+2026-05-15 00:04:44 - main - INFO - Debug mode: False
+2026-05-15 00:12:09 - main - INFO - Environment: development
+2026-05-15 00:12:09 - main - INFO - Debug mode: False
+2026-05-15 00:13:02 - main - INFO - Environment: development
+2026-05-15 00:13:02 - main - INFO - Debug mode: False
+2026-05-15 00:14:22 - api.routes.analytics - INFO - Fetching analytics stats
+2026-05-15 00:14:22 - api.routes.analytics - INFO - Fetching analytics stats
+2026-05-15 00:16:32 - api.routes.analytics - INFO - Fetching analytics stats
+2026-05-15 00:16:32 - api.routes.analytics - INFO - Fetching analytics stats
+2026-05-15 00:16:37 - api.routes.analytics - INFO - Fetching analytics stats
+2026-05-15 00:16:37 - api.routes.analytics - INFO - Fetching analytics stats
+2026-05-15 00:17:00 - api.routes.creators - WARNING - YouTube search failed, using fallback: YouTube API key not configured
+2026-05-15 00:17:00 - services.ytdlp_service - INFO - yt-dlp fallback search for: t
+2026-05-15 00:17:00 - api.routes.creators - WARNING - YouTube search failed, using fallback: YouTube API key not configured
+2026-05-15 00:17:00 - services.ytdlp_service - INFO - yt-dlp fallback search for: te
+2026-05-15 00:17:32 - api.routes.export - ERROR - Export creation error: 400: No creators selected
+2026-05-15 00:17:54 - api.routes.analytics - INFO - Fetching analytics stats
+2026-05-15 00:17:54 - api.routes.analytics - INFO - Fetching analytics stats
+2026-05-15 00:17:55 - api.routes.console - ERROR - Error sending log: 
+2026-05-15 00:17:55 - api.routes.console - ERROR - WebSocket error: WebSocket is not connected. Need to call "accept" first.
+2026-05-15 00:18:25 - api.routes.analytics - INFO - Fetching analytics stats
+2026-05-15 00:18:54 - api.routes.analytics - INFO - Fetching analytics stats
+2026-05-15 00:19:25 - api.routes.analytics - INFO - Fetching analytics stats
+2026-05-15 00:19:55 - api.routes.analytics - INFO - Fetching analytics stats
+2026-05-15 00:20:03 - api.routes.creators - WARNING - YouTube search failed, using fallback: YouTube API key not configured
+2026-05-15 00:20:03 - services.ytdlp_service - INFO - yt-dlp fallback search for: j
+2026-05-15 00:20:11 - api.routes.creators - WARNING - YouTube search failed, using fallback: YouTube API key not configured
+2026-05-15 00:20:11 - services.ytdlp_service - INFO - yt-dlp fallback search for: r
+2026-05-15 00:20:14 - api.routes.creators - WARNING - YouTube search failed, using fallback: YouTube API key not configured
+2026-05-15 00:20:14 - services.ytdlp_service - INFO - yt-dlp fallback search for: re
+2026-05-15 00:20:17 - api.routes.creators - WARNING - YouTube search failed, using fallback: YouTube API key not configured
+2026-05-15 00:20:17 - services.ytdlp_service - INFO - yt-dlp fallback search for: reb
+2026-05-15 00:20:18 - api.routes.creators - WARNING - YouTube search failed, using fallback: YouTube API key not configured
+2026-05-15 00:20:18 - services.ytdlp_service - INFO - yt-dlp fallback search for: rebe
+2026-05-15 00:20:20 - api.routes.creators - WARNING - YouTube search failed, using fallback: YouTube API key not configured
+2026-05-15 00:20:20 - services.ytdlp_service - INFO - yt-dlp fallback search for: rebel
+2026-05-15 00:20:22 - api.routes.creators - WARNING - YouTube search failed, using fallback: YouTube API key not configured
+2026-05-15 00:20:22 - services.ytdlp_service - INFO - yt-dlp fallback search for: rebelk
+2026-05-15 00:20:23 - api.routes.creators - WARNING - YouTube search failed, using fallback: YouTube API key not configured
+2026-05-15 00:20:23 - services.ytdlp_service - INFO - yt-dlp fallback search for: rebelki
+2026-05-15 00:20:24 - api.routes.analytics - INFO - Fetching analytics stats
+2026-05-15 00:20:25 - api.routes.creators - WARNING - YouTube search failed, using fallback: YouTube API key not configured
+2026-05-15 00:20:25 - services.ytdlp_service - INFO - yt-dlp fallback search for: rebelkid
+2026-05-15 00:20:55 - api.routes.analytics - INFO - Fetching analytics stats
+2026-05-15 00:21:24 - api.routes.analytics - INFO - Fetching analytics stats
+2026-05-15 00:21:55 - api.routes.analytics - INFO - Fetching analytics stats
+2026-05-15 00:22:24 - api.routes.analytics - INFO - Fetching analytics stats
+2026-05-15 00:22:55 - api.routes.analytics - INFO - Fetching analytics stats
+2026-05-15 00:23:25 - api.routes.analytics - INFO - Fetching analytics stats
+2026-05-15 00:23:54 - api.routes.analytics - INFO - Fetching analytics stats
+2026-05-15 00:24:25 - api.routes.analytics - INFO - Fetching analytics stats
+2026-05-15 00:24:54 - api.routes.analytics - INFO - Fetching analytics stats
+2026-05-15 00:25:16 - main - INFO - Environment: development
+2026-05-15 00:25:16 - main - INFO - Debug mode: False
+2026-05-15 00:25:25 - api.routes.analytics - INFO - Fetching analytics stats
+2026-05-15 00:25:47 - api.routes.creators - WARNING - YouTube search failed, using fallback: YouTube API key not configured
+2026-05-15 00:25:47 - services.ytdlp_service - INFO - yt-dlp fallback search for: m
+2026-05-15 00:25:47 - api.routes.creators - WARNING - YouTube search failed, using fallback: YouTube API key not configured
+2026-05-15 00:25:47 - services.ytdlp_service - INFO - yt-dlp fallback search for: mr
+2026-05-15 00:25:55 - api.routes.analytics - INFO - Fetching analytics stats
+2026-05-15 00:26:19 - main - INFO - Environment: development
+2026-05-15 00:26:19 - main - INFO - Debug mode: False
+2026-05-15 00:26:19 - main - INFO - Environment: development
+2026-05-15 00:26:19 - main - INFO - Debug mode: False
+2026-05-15 00:26:20 - main - INFO - Environment: development
+2026-05-15 00:26:20 - main - INFO - Debug mode: False
+2026-05-15 00:26:20 - main - INFO - Environment: development
+2026-05-15 00:26:20 - main - INFO - Debug mode: False
+2026-05-15 00:26:25 - api.routes.analytics - INFO - Fetching analytics stats
+2026-05-15 00:26:55 - api.routes.analytics - INFO - Fetching analytics stats
+2026-05-15 00:27:25 - api.routes.analytics - INFO - Fetching analytics stats
+2026-05-15 00:27:54 - api.routes.analytics - INFO - Fetching analytics stats
+2026-05-15 00:28:25 - api.routes.analytics - INFO - Fetching analytics stats
+2026-05-15 00:28:54 - api.routes.analytics - INFO - Fetching analytics stats
+2026-05-15 00:29:25 - api.routes.analytics - INFO - Fetching analytics stats
+2026-05-15 00:29:54 - api.routes.analytics - INFO - Fetching analytics stats
+2026-05-15 00:30:25 - api.routes.analytics - INFO - Fetching analytics stats
+2026-05-15 00:30:36 - api.routes.analytics - INFO - Fetching analytics stats
+2026-05-15 00:30:36 - api.routes.analytics - INFO - Fetching analytics stats
+2026-05-15 00:30:54 - api.routes.analytics - INFO - Fetching analytics stats
+2026-05-15 00:31:06 - api.routes.analytics - INFO - Fetching analytics stats
+2026-05-15 00:31:19 - api.routes.export - ERROR - Export creation error: 400: No creators selected
+2026-05-15 00:31:21 - api.routes.export - ERROR - Export creation error: 400: No creators selected
+2026-05-15 00:31:23 - api.routes.export - ERROR - Export creation error: 400: No creators selected
+2026-05-15 00:31:25 - api.routes.analytics - INFO - Fetching analytics stats
+2026-05-15 00:31:54 - api.routes.analytics - INFO - Fetching analytics stats
+2026-05-15 00:32:24 - api.routes.analytics - INFO - Fetching analytics stats
+2026-05-15 00:32:54 - api.routes.analytics - INFO - Fetching analytics stats
+2026-05-15 00:33:24 - api.routes.analytics - INFO - Fetching analytics stats
+2026-05-15 00:33:54 - api.routes.analytics - INFO - Fetching analytics stats
+2026-05-15 00:34:24 - api.routes.analytics - INFO - Fetching analytics stats
+2026-05-15 00:34:54 - api.routes.analytics - INFO - Fetching analytics stats
+2026-05-15 00:35:25 - api.routes.analytics - INFO - Fetching analytics stats
+2026-05-15 00:35:54 - api.routes.analytics - INFO - Fetching analytics stats
+2026-05-15 00:36:07 - api.routes.analytics - INFO - Fetching analytics stats
+2026-05-15 00:36:07 - api.routes.analytics - INFO - Fetching analytics stats
+2026-05-15 00:36:25 - api.routes.analytics - INFO - Fetching analytics stats
+2026-05-15 00:36:54 - api.routes.analytics - INFO - Fetching analytics stats
+2026-05-15 00:37:24 - api.routes.analytics - INFO - Fetching analytics stats
+2026-05-15 00:37:54 - api.routes.analytics - INFO - Fetching analytics stats
+2026-05-15 00:38:24 - api.routes.analytics - INFO - Fetching analytics stats
+2026-05-15 00:38:25 - api.routes.analytics - INFO - Fetching analytics stats
+2026-05-15 00:38:25 - api.routes.analytics - INFO - Fetching analytics stats
+2026-05-15 00:38:54 - api.routes.analytics - INFO - Fetching analytics stats
+2026-05-15 00:38:55 - api.routes.analytics - INFO - Fetching analytics stats
+2026-05-15 00:39:24 - api.routes.analytics - INFO - Fetching analytics stats
+2026-05-15 00:39:25 - api.routes.analytics - INFO - Fetching analytics stats
+2026-05-15 00:39:54 - api.routes.analytics - INFO - Fetching analytics stats
+2026-05-15 00:39:55 - api.routes.analytics - INFO - Fetching analytics stats
+2026-05-15 00:40:24 - api.routes.analytics - INFO - Fetching analytics stats
+2026-05-15 00:40:25 - api.routes.analytics - INFO - Fetching analytics stats
+2026-05-15 00:40:54 - api.routes.analytics - INFO - Fetching analytics stats
+2026-05-15 00:40:55 - api.routes.analytics - INFO - Fetching analytics stats
+2026-05-15 00:41:24 - api.routes.analytics - INFO - Fetching analytics stats
+2026-05-15 00:41:25 - api.routes.analytics - INFO - Fetching analytics stats
+2026-05-15 00:41:54 - api.routes.analytics - INFO - Fetching analytics stats
+2026-05-15 00:41:55 - api.routes.analytics - INFO - Fetching analytics stats
+2026-05-15 00:42:25 - api.routes.analytics - INFO - Fetching analytics stats
+2026-05-15 00:42:25 - api.routes.analytics - INFO - Fetching analytics stats
+2026-05-15 00:42:54 - api.routes.analytics - INFO - Fetching analytics stats
+2026-05-15 00:42:55 - api.routes.analytics - INFO - Fetching analytics stats
+2026-05-15 00:43:24 - api.routes.analytics - INFO - Fetching analytics stats
+2026-05-15 00:43:25 - api.routes.analytics - INFO - Fetching analytics stats
+2026-05-15 00:43:54 - api.routes.analytics - INFO - Fetching analytics stats
+2026-05-15 00:43:55 - api.routes.analytics - INFO - Fetching analytics stats
+2026-05-15 00:44:24 - api.routes.analytics - INFO - Fetching analytics stats
+2026-05-15 00:44:54 - api.routes.analytics - INFO - Fetching analytics stats
+2026-05-15 00:45:24 - api.routes.analytics - INFO - Fetching analytics stats
+2026-05-15 00:45:34 - api.routes.analytics - INFO - Fetching analytics stats
+2026-05-15 00:45:54 - api.routes.analytics - INFO - Fetching analytics stats
+2026-05-15 00:46:08 - main - INFO - Environment: development
+2026-05-15 00:46:08 - main - INFO - Debug mode: False
+2026-05-15 00:46:08 - main - INFO - Environment: development
+2026-05-15 00:46:08 - main - INFO - Debug mode: False
+2026-05-15 00:46:21 - main - INFO - Environment: development
+2026-05-15 00:46:21 - main - INFO - Debug mode: False
+2026-05-15 00:46:24 - api.routes.analytics - INFO - Fetching analytics stats
+2026-05-15 00:46:27 - main - INFO - Environment: development
+2026-05-15 00:46:27 - main - INFO - Debug mode: False
+2026-05-15 00:46:27 - main - INFO - Environment: development
+2026-05-15 00:46:27 - main - INFO - Debug mode: False
+2026-05-15 00:46:42 - api.routes.analytics - INFO - Fetching analytics stats
+2026-05-15 00:46:42 - api.routes.analytics - INFO - Fetching analytics stats
+2026-05-15 00:46:54 - api.routes.analytics - INFO - Fetching analytics stats
+2026-05-15 00:46:59 - api.routes.console - ERROR - Error sending log: 
+2026-05-15 00:46:59 - api.routes.console - ERROR - WebSocket error: WebSocket is not connected. Need to call "accept" first.
+2026-05-15 00:47:24 - api.routes.analytics - INFO - Fetching analytics stats
+2026-05-15 00:47:54 - api.routes.analytics - INFO - Fetching analytics stats
+2026-05-15 00:48:24 - api.routes.analytics - INFO - Fetching analytics stats
+2026-05-15 00:48:54 - api.routes.analytics - INFO - Fetching analytics stats
+2026-05-15 00:49:24 - api.routes.analytics - INFO - Fetching analytics stats
+2026-05-15 00:49:54 - api.routes.analytics - INFO - Fetching analytics stats
+2026-05-15 00:50:24 - api.routes.analytics - INFO - Fetching analytics stats
+2026-05-15 00:50:54 - api.routes.analytics - INFO - Fetching analytics stats
+2026-05-15 00:51:24 - api.routes.analytics - INFO - Fetching analytics stats
+2026-05-15 00:51:54 - api.routes.analytics - INFO - Fetching analytics stats
+2026-05-15 00:52:24 - api.routes.analytics - INFO - Fetching analytics stats
+2026-05-15 00:52:54 - api.routes.analytics - INFO - Fetching analytics stats
+2026-05-15 00:53:24 - api.routes.analytics - INFO - Fetching analytics stats
+2026-05-15 00:53:54 - api.routes.analytics - INFO - Fetching analytics stats
+2026-05-15 00:54:24 - api.routes.analytics - INFO - Fetching analytics stats
+2026-05-15 00:54:54 - api.routes.analytics - INFO - Fetching analytics stats
+2026-05-15 00:55:24 - api.routes.analytics - INFO - Fetching analytics stats
+2026-05-15 00:55:54 - api.routes.analytics - INFO - Fetching analytics stats
+2026-05-15 00:56:24 - api.routes.analytics - INFO - Fetching analytics stats
+2026-05-15 00:56:54 - api.routes.analytics - INFO - Fetching analytics stats
+2026-05-15 00:57:24 - api.routes.analytics - INFO - Fetching analytics stats
+2026-05-15 00:57:54 - api.routes.analytics - INFO - Fetching analytics stats
+2026-05-15 00:58:09 - main - INFO - Environment: development
+2026-05-15 00:58:09 - main - INFO - Environment: development
+2026-05-15 00:58:09 - main - INFO - Debug mode: False
+2026-05-15 00:58:09 - main - INFO - Debug mode: False
+2026-05-15 00:58:20 - main - INFO - Environment: development
+2026-05-15 00:58:20 - main - INFO - Debug mode: False
+2026-05-15 00:58:20 - main - INFO - Environment: development
+2026-05-15 00:58:20 - main - INFO - Debug mode: False
+2026-05-15 00:58:22 - main - INFO - Environment: development
+2026-05-15 00:58:22 - main - INFO - Debug mode: False
+2026-05-15 00:58:22 - main - INFO - Environment: development
+2026-05-15 00:58:22 - main - INFO - Debug mode: False
+2026-05-15 00:58:24 - main - INFO - Environment: development
+2026-05-15 00:58:24 - main - INFO - Debug mode: False
+2026-05-15 00:58:24 - main - INFO - Environment: development
+2026-05-15 00:58:24 - main - INFO - Debug mode: False
+2026-05-15 00:58:24 - api.routes.analytics - INFO - Fetching analytics stats
+2026-05-15 00:58:54 - api.routes.analytics - INFO - Fetching analytics stats
+2026-05-15 00:58:55 - main - INFO - Environment: development
+2026-05-15 00:58:55 - main - INFO - Debug mode: False
+2026-05-15 00:59:24 - api.routes.analytics - INFO - Fetching analytics stats
+2026-05-15 00:59:27 - api.routes.export - INFO - Creating csv export for demo creators
+2026-05-15 00:59:27 - api.routes.export - INFO - Exporting 4 creators in csv format
+2026-05-15 00:59:27 - api.routes.export - INFO - Export created: export_1778767167519 (csv, 383 bytes)
+2026-05-15 00:59:27 - api.routes.export - INFO - Downloading export: export_1778767167519
+2026-05-15 00:59:27 - api.routes.export - INFO - Streaming export: export_1778767167519 (383 bytes)
+2026-05-15 00:59:49 - api.routes.export - INFO - Creating json export for demo creators
+2026-05-15 00:59:49 - api.routes.export - INFO - Exporting 4 creators in json format
+2026-05-15 00:59:49 - api.routes.export - INFO - Export created: export_1778767189252 (json, 2762 bytes)
+2026-05-15 00:59:49 - api.routes.export - INFO - Downloading export: export_1778767189252
+2026-05-15 00:59:49 - api.routes.export - INFO - Streaming export: export_1778767189252 (2762 bytes)
+2026-05-15 00:59:54 - api.routes.analytics - INFO - Fetching analytics stats
+2026-05-15 01:00:04 - api.routes.export - INFO - Creating pdf export for demo creators
+2026-05-15 01:00:04 - api.routes.export - INFO - Exporting 4 creators in pdf format
+2026-05-15 01:00:04 - api.routes.export - INFO - Export created: export_1778767204747 (pdf, 2482 bytes)
+2026-05-15 01:00:04 - api.routes.export - INFO - Downloading export: export_1778767204747
+2026-05-15 01:00:04 - api.routes.export - INFO - Streaming export: export_1778767204747 (2482 bytes)
+2026-05-15 01:00:24 - api.routes.analytics - INFO - Fetching analytics stats
+2026-05-15 01:00:50 - main - INFO - Environment: development
+2026-05-15 01:00:50 - main - INFO - Environment: development
+2026-05-15 01:00:50 - main - INFO - Debug mode: False
+2026-05-15 01:00:54 - api.routes.analytics - INFO - Fetching analytics stats
+2026-05-15 01:01:05 - main - INFO - Environment: development
+2026-05-15 01:01:05 - main - INFO - Debug mode: False
+2026-05-15 01:01:05 - main - INFO - Environment: development
+2026-05-15 01:01:05 - main - INFO - Debug mode: False
+2026-05-15 01:01:14 - main - INFO - Environment: development
+2026-05-15 01:01:14 - main - INFO - Debug mode: False
+2026-05-15 01:01:24 - api.routes.analytics - INFO - Fetching analytics stats
+2026-05-15 01:01:30 - api.routes.console - INFO - Console client connected. Total clients: 1
+2026-05-15 01:01:54 - api.routes.analytics - INFO - Fetching analytics stats
+2026-05-15 01:02:24 - api.routes.analytics - INFO - Fetching analytics stats
+2026-05-15 01:02:30 - api.routes.console - INFO - Console client disconnected
+2026-05-15 01:02:30 - api.routes.console - INFO - Console client removed. Total clients: 0
+2026-05-15 01:02:54 - api.routes.analytics - INFO - Fetching analytics stats
+2026-05-15 01:03:09 - api.routes.export - INFO - Creating csv export for demo creators
+2026-05-15 01:03:09 - api.routes.export - INFO - Exporting 4 creators in csv format
+2026-05-15 01:03:09 - api.routes.export - INFO - Export created: export_1778767389342 (csv, 383 bytes)
+2026-05-15 01:03:09 - api.routes.export - INFO - Downloading export: export_1778767389342
+2026-05-15 01:03:09 - api.routes.export - INFO - Streaming export: export_1778767389342 (383 bytes)
+2026-05-15 01:03:24 - api.routes.analytics - INFO - Fetching analytics stats
+2026-05-15 01:03:29 - api.routes.console - INFO - Console client connected. Total clients: 1
+2026-05-15 01:03:54 - api.routes.analytics - INFO - Fetching analytics stats
+2026-05-15 01:04:24 - api.routes.analytics - INFO - Fetching analytics stats
+2026-05-15 01:04:54 - api.routes.analytics - INFO - Fetching analytics stats
+2026-05-15 01:05:24 - api.routes.analytics - INFO - Fetching analytics stats
+2026-05-15 01:05:40 - api.routes.analytics - INFO - Fetching analytics stats
+2026-05-15 01:05:40 - api.routes.analytics - INFO - Fetching analytics stats
+2026-05-15 01:05:53 - api.routes.export - INFO - Creating csv export for demo creators
+2026-05-15 01:05:53 - api.routes.export - INFO - Exporting 4 creators in csv format
+2026-05-15 01:05:53 - api.routes.export - INFO - Export created: export_1778767553811 (csv, 383 bytes)
+2026-05-15 01:05:53 - api.routes.export - INFO - Downloading export: export_1778767553811
+2026-05-15 01:05:53 - api.routes.export - INFO - Streaming export: export_1778767553811 (383 bytes)
+2026-05-15 01:05:54 - api.routes.analytics - INFO - Fetching analytics stats
+2026-05-15 01:06:24 - api.routes.analytics - INFO - Fetching analytics stats
+2026-05-15 01:06:54 - api.routes.analytics - INFO - Fetching analytics stats
+2026-05-15 01:07:24 - api.routes.analytics - INFO - Fetching analytics stats
+2026-05-15 01:07:54 - api.routes.analytics - INFO - Fetching analytics stats
+2026-05-15 01:08:24 - api.routes.analytics - INFO - Fetching analytics stats
+2026-05-15 01:08:54 - api.routes.analytics - INFO - Fetching analytics stats
+2026-05-15 01:09:24 - api.routes.analytics - INFO - Fetching analytics stats
+2026-05-15 01:09:54 - api.routes.analytics - INFO - Fetching analytics stats
+2026-05-15 01:10:24 - api.routes.analytics - INFO - Fetching analytics stats
+2026-05-15 01:10:54 - api.routes.analytics - INFO - Fetching analytics stats
+2026-05-15 01:11:24 - api.routes.analytics - INFO - Fetching analytics stats
