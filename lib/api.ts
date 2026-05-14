@@ -78,15 +78,24 @@ export const api = {
   // Export
   createExport: async (
     format: "csv" | "json" | "pdf",
-    creatorIds: string[]
+    creatorIds?: string[],
+    searchQuery?: string,
+    platform: string = "youtube"
   ): Promise<ExportResponse> => {
     const params = new URLSearchParams({
       format,
-      ...creatorIds.reduce((acc, id, idx) => {
-        acc[`creator_ids=${idx}`] = id;
-        return acc;
-      }, {} as Record<string, string>),
+      platform,
     });
+
+    // Add creator IDs if provided
+    if (creatorIds && creatorIds.length > 0) {
+      creatorIds.forEach((id) => params.append("creator_ids", id));
+    }
+
+    // Add search query if provided (triggers live data fetch)
+    if (searchQuery && searchQuery.trim()) {
+      params.append("query", searchQuery);
+    }
 
     const response = await fetch(`${API_URL}/api/export/${format}?${params}`, {
       method: "POST",

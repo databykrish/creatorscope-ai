@@ -1,18 +1,26 @@
 """Export routes."""
 from fastapi import APIRouter, Query, Path, HTTPException
 from fastapi.responses import StreamingResponse
-from typing import List, Dict, Any
+from typing import List, Dict, Any, Optional
 import io
 from datetime import datetime, timedelta
 
 from models.schemas import Creator, ExportRequest, ExportResponse
 from services.export_service import ExportService
+from services.youtube_service import YouTubeService
+from services.ytdlp_service import YtdlpService
+from services.scoring_service import ScoringService
+from utils.cache import cache
+from utils.formatters import format_number
 from core.logging import get_logger
 
 logger = get_logger(__name__)
 router = APIRouter(prefix="/api/export", tags=["export"])
 
 export_service = ExportService()
+youtube_service = YouTubeService()
+ytdlp_service = YtdlpService()
+scoring_service = ScoringService()
 
 # In-memory export store (will be replaced by database in production)
 export_store: Dict[str, Dict[str, Any]] = {}
@@ -22,21 +30,78 @@ export_store: Dict[str, Dict[str, Any]] = {}
 async def create_export(
     format_type: str = Path(..., regex="^(csv|json|pdf)$"),
     creator_ids: List[str] = Query(default=[]),
+    query: Optional[str] = Query(default=None),
+    platform: str = Query(default="youtube"),
 ) -> ExportResponse:
     """Create an export request.
 
     Args:
         format_type: Export format (csv|json|pdf)
-        creator_ids: Creator IDs to export (empty = demo/all creators)
+        creator_ids: Creator IDs to export (legacy, for specific creators)
+        query: Search query to fetch live creators (optional)
+        platform: Platform to search on (youtube|instagram|tiktok)
 
     Returns:
         Export response with download URL
     """
     try:
-        logger.info(f"Creating {format_type} export for {len(creator_ids) if creator_ids else 'demo'} creators")
-
-        # Generate mock creators for demo/all export
-        creators = _get_demo_creators()
+        # Determine which creators to export
+        if query and query.strip():
+            # Fetch live creators based on search query
+            logger.info(f"Creating {format_type} export with live search: '{query}' on {platform}")
+            
+            # Check cache first
+            cache_key = f"search:{query}:{platform}:50"
+            cached_result = cache.get(cache_key)
+            
+            if cached_result:
+                creators = cached_result
+                logger.info(f"Using cached creators for export")
+            else:
+                creators_data = []
+                fallback_used = False
+                
+                try:
+                    # Try YouTube API first
+                    youtube_results = await youtube_service.search_channels(
+                        query, max_results=50, platform="youtube"
+                    )
+                    creators_data.extend(youtube_results)
+                    source = "youtube_api"
+                except Exception as e:
+                    logger.info(f"YouTube API unavailable, using yt-dlp scraper: {str(e)}")
+                    fallback_used = True
+                    try:
+                        yt_results = await ytdlp_service.search_channels(query, max_results=50)
+                        creators_data.extend(yt_results)
+                        source = "ytdlp"
+                    except Exception as e2:
+                        logger.error(f"Both YouTube and yt-dlp failed: {str(e2)}")
+                        creators_data = []
+                
+                # Convert raw data to Creator objects
+                creators = []
+                for creator_data in creators_data:
+                    try:
+                        creator = Creator(**creator_data)
+                        creators.append(creator)
+                    except Exception as e:
+                        logger.warning(f"Failed to parse creator: {str(e)}")
+                        continue
+                
+                # Cache the results
+                if creators:
+                    cache.set(cache_key, creators, ttl=3600)
+            
+            logger.info(f"Found {len(creators)} live creators for export")
+        elif creator_ids:
+            # Use specific creator IDs if provided
+            logger.info(f"Creating {format_type} export for {len(creator_ids)} specific creators")
+            creators = []  # Could fetch by IDs if needed
+        else:
+            # Fall back to demo creators for testing
+            logger.info(f"Creating {format_type} export with demo creators")
+            creators = _get_demo_creators()
 
         logger.info(f"Exporting {len(creators)} creators in {format_type} format")
 

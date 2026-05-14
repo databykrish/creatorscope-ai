@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import {
   Download,
@@ -39,11 +39,39 @@ const exportFormats = [
 export function ExportPanel() {
   const { isExporting, error, exportFile } = useExport();
   const [completed, setCompleted] = useState<string[]>([]);
+  const [searchState, setSearchState] = useState<{
+    query: string;
+    platform: string;
+  } | null>(null);
+
+  // Load the last search state from sessionStorage
+  useEffect(() => {
+    const stored = sessionStorage.getItem("lastSearchState");
+    if (stored) {
+      try {
+        const parsed = JSON.parse(stored);
+        setSearchState({
+          query: parsed.query || "",
+          platform: parsed.platform || "youtube",
+        });
+      } catch (err) {
+        console.error("Failed to parse search state:", err);
+        setSearchState({ query: "", platform: "youtube" });
+      }
+    } else {
+      setSearchState({ query: "", platform: "youtube" });
+    }
+  }, []);
 
   const handleExport = async (format: "csv" | "json" | "pdf") => {
     try {
-      // For demo purposes, export all tracked creators (empty list means all)
-      await exportFile(format, []);
+      // Export with live search data if available
+      await exportFile(
+        format,
+        undefined, // No specific creator IDs
+        searchState?.query || "", // Search query (empty string will use demo data)
+        searchState?.platform || "youtube"
+      );
       setCompleted((prev) => [...prev, format]);
       setTimeout(() => setCompleted((prev) => prev.filter((c) => c !== format)), 3000);
     } catch (err) {

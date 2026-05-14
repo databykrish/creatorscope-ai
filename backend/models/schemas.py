@@ -17,8 +17,8 @@ class Creator(BaseModel):
     uploadConsistency: int = Field(default=50, ge=0, le=100, description="Consistency score 0-100")
     campaignReady: str = Field(default="pending", description="Status: ready|review|pending")
     niche: str = Field(..., description="Creator's primary niche")
-    aiSummary: str = Field(..., description="AI-generated summary paragraph")
-    whyRecommended: str = Field(..., description="Why this creator is recommended")
+    aiSummary: str = Field(default="", description="AI-generated summary paragraph")
+    whyRecommended: str = Field(default="", description="Why this creator is recommended")
     recentPosts: int = Field(default=0, description="Number of recent posts")
     avgViews: str = Field(default="0", description="Formatted average views (e.g., '420K')")
 

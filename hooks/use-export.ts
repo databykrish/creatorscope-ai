@@ -6,7 +6,12 @@ import { api } from "@/lib/api";
 interface UseExportReturn {
   isExporting: boolean;
   error: string | null;
-  exportFile: (format: "csv" | "json" | "pdf", creatorIds: string[]) => Promise<void>;
+  exportFile: (
+    format: "csv" | "json" | "pdf",
+    creatorIds?: string[],
+    searchQuery?: string,
+    platform?: string
+  ) => Promise<void>;
 }
 
 export function useExport(): UseExportReturn {
@@ -14,13 +19,23 @@ export function useExport(): UseExportReturn {
   const [error, setError] = useState<string | null>(null);
 
   const exportFile = useCallback(
-    async (format: "csv" | "json" | "pdf", creatorIds: string[]) => {
+    async (
+      format: "csv" | "json" | "pdf",
+      creatorIds?: string[],
+      searchQuery?: string,
+      platform: string = "youtube"
+    ) => {
       setIsExporting(true);
       setError(null);
 
       try {
-        // Create export
-        const exportResponse = await api.createExport(format, creatorIds);
+        // Create export with search query and platform for live data
+        const exportResponse = await api.createExport(
+          format,
+          creatorIds,
+          searchQuery,
+          platform
+        );
 
         // Download file
         const blob = await api.downloadExport(exportResponse.export_id);

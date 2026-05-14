@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Search, SlidersHorizontal, X } from "lucide-react";
 import { CreatorCard } from "./creator-card";
@@ -30,6 +30,19 @@ export function SearchPanel() {
     niche: activeNiche === "All Niches" ? undefined : activeNiche,
     limit: 20,
   });
+
+  // Store search state in sessionStorage for other components to access
+  useEffect(() => {
+    sessionStorage.setItem(
+      "lastSearchState",
+      JSON.stringify({
+        query,
+        platform: activePlatform,
+        niche: activeNiche,
+        timestamp: Date.now(),
+      })
+    );
+  }, [query, activePlatform, activeNiche]);
 
   const handleSearch = (val: string) => {
     setQuery(val);

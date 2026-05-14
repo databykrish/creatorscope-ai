@@ -3,24 +3,5 @@
   "devCommand": "pnpm dev",
   "installCommand": "pnpm install",
   "framework": "nextjs",
-  "outputDirectory": ".next",
-  "env": {
-    "NEXT_PUBLIC_API_URL": {
-      "description": "Backend API base URL for API calls",
-      "required": true,
-      "example": "https://creatorscope-api.onrender.com"
-    }
-  },
-  "git": {
-    "deploymentEnabled": {
-      "main": true
-    }
-  },
-  "regions": ["iad1"],
-  "functions": {
-    "api/**/*.ts": {
-      "memory": 3008,
-      "maxDuration": 30
-    }
-  }
+  "outputDirectory": ".next"
 }

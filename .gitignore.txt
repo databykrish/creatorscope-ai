@@ -1,24 +1,25 @@
-# dependencies
-node_modules/
-.venv/
-venv/
+# env
+.env
+.env.local
+*.env
 
-# next.js
+# node
+node_modules/
+
+# next
 .next/
 out/
 
 # python
+.venv/
 __pycache__/
 *.pyc
 
-# env files
-.env
-.env.local
-.env.production
-
 # logs
+logs/
 *.log
+backend/logs/
 
-# OS files
+# OS
 .DS_Store
 Thumbs.db
