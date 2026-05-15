@@ -193,6 +193,63 @@ ALLOWED_ORIGINS=http://localhost:3000
 NEXT_PUBLIC_API_URL=http://localhost:8000
 ```
 
+## ⚠️ Important: Render Free Tier Cold Start
+
+The backend is hosted on Render's free tier. **Free instances spin down after 15 minutes of inactivity.**
+
+When the evaluator or first user hits the API after a period of inactivity, the backend will take **30–60 seconds to wake up**. This is expected behaviour — not a bug.
+
+**What you'll see**: The frontend may show a loading spinner or "connecting…" for up to a minute on first load. Subsequent requests are fast.
+
+To pre-warm the backend before a demo, visit:
+```
+https://creatorscope-ai.onrender.com/api/health
+```
+Wait for `{"status": "ok"}` before opening the frontend.
+
+---
+
+## 🔐 Authentication & Age-Gated Content
+
+### Option A: YouTube Data API Key (recommended)
+
+Set `YOUTUBE_API_KEY` in your backend `.env`. All standard public channel data is accessible without additional authentication.
+
+### Option B: Cookie-based session (for age-gated or restricted content)
+
+The yt-dlp fallback supports browser cookie injection for restricted videos:
+
+1. Export your YouTube cookies from your browser using the [Get cookies.txt](https://chrome.google.com/webstore/detail/get-cookiestxt-locally/cclelndahbckbenkjhflpdbgdldlbecc) extension.
+2. Save the file as `backend/cookies.txt`.
+3. Set the env var:
+   ```
+   YT_DLP_COOKIES_PATH=cookies.txt
+   ```
+4. The yt-dlp service will automatically pass `--cookies cookies.txt` when this env var is present.
+
+> **Note**: Never commit `cookies.txt` to the repository — it is already in `.gitignore`.
+
+---
+
+## 📊 Output Format
+
+Results are returned as a list of dictionaries and are exportable to CSV or JSON via the `/api/export/{format}` endpoint.
+
+### Field reference
+
+| Field | Description | Fallback value |
+|---|---|---|
+| `channel_id` | Unique YT channel identifier | — |
+| `channel_name` | Display name | — |
+| `subscribers` | Total subscriber count | `"Metric restricted"` |
+| `total_views` | Lifetime view count | `"Metric restricted"` |
+| `recent_post_1..5` | Upload dates (YYYY-MM-DD) of 5 most recent videos | `"Date not found"` |
+| `engagement_rate` | Calculated engagement % | `"Metric restricted"` |
+| `campaign_ready` | Boolean audit flag | `false` |
+
+A pre-generated sample output (5 creators) is in [`sample_output.csv`](./sample_output.csv).
+
+
 ## 🧪 Testing
 
 ### Test Backend
