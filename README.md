@@ -207,7 +207,6 @@ https://creatorscope-ai.onrender.com/api/health
 ```
 Wait for `{"status": "ok"}` before opening the frontend.
 
----
 
 ## 🔐 Authentication & Age-Gated Content
 
@@ -229,7 +228,6 @@ The yt-dlp fallback supports browser cookie injection for restricted videos:
 
 > **Note**: Never commit `cookies.txt` to the repository — it is already in `.gitignore`.
 
----
 
 ## 📊 Output Format
 
