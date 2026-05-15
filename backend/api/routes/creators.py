@@ -87,6 +87,7 @@ async def search_creators(
                 raise InvalidSearchQueryError("All search methods failed")
 
         # Sort results
+        creators_data = [x for x in creators_data if isinstance(x, dict)]
         if sort == "engagement":
             creators_data.sort(key=lambda x: x.get("engagement", 0), reverse=True)
         elif sort == "followers":
