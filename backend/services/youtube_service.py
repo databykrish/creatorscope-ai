@@ -244,7 +244,9 @@ class YouTubeService:
         video_count = int(statistics.get("videoCount", 0))
 
         # Calculate estimated engagement
-        engagement = 4.5 if subscriber_count > 0 else 0
+        avg_views_per_video = view_count / max(video_count, 1)
+        engagement = round((avg_views_per_video / max(subscriber_count, 1)) * 100, 1) if subscriber_count > 0 else 0.0
+        engagement = min(engagement, 25.0)  # cap at 25% to avoid outlier spikes
 
         return {
             "id": channel_data.get("id", ""),
@@ -256,13 +258,30 @@ class YouTubeService:
             "views": format_number(view_count),
             "views_raw": view_count,
             "video_count": video_count,
-            "niche": "Varied",  # Would be detected via ML in production
+            "niche": self._classify_niche(snippet.get("title", ""), snippet.get("description", "")),
             "engagement": engagement,
             "description": snippet.get("description", ""),
             "thumbnail": snippet.get("thumbnails", {}).get("medium", {}).get("url", ""),
             "verified": snippet.get("verified", False),
         }
 
+    @staticmethod
+    def _classify_niche(title: str, description: str) -> str:
+        """Classify channel niche from title and description."""
+        text = (title + " " + description).lower()
+        NICHES = {
+            "Tech": ["tech", "technology", "gadget", "review", "coding", "software", "hardware", "phone", "computer", "ai"],
+            "Finance": ["finance", "money", "invest", "stock", "crypto", "wealth", "trading", "budget"],
+            "Gaming": ["game", "gaming", "playthrough", "esports", "minecraft", "fortnite", "twitch"],
+            "Lifestyle": ["lifestyle", "vlog", "daily", "travel", "food", "fashion", "beauty", "wellness"],
+            "Education": ["learn", "education", "tutorial", "how to", "course", "science", "math", "history"],
+            "Entertainment": ["entertainment", "comedy", "funny", "prank", "reaction", "music"],
+        }
+        for niche, keywords in NICHES.items():
+            if any(k in text for k in keywords):
+                return niche
+        return "Varied"
+    
     async def close(self):
         """Close the HTTP client."""
         await self.client.aclose()
