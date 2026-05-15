@@ -104,12 +104,13 @@ async def search_creators(
             campaign_ready = scoring_service.calculate_campaign_readiness(
                 consistency_score, engagement_rate
             )
-
+            logger.info(f"DEBUG before ai_summary")
             ai_summary = scoring_service.generate_ai_summary(data)
+            logger.info(f"DEBUG before why_recommended")
             why_recommended = scoring_service.generate_why_recommended(
                 data, {"consistency_score": consistency_score}
             )
-
+            logger.info(f"DEBUG before Creator()")
             creator = Creator(
                 id=data.get("id", ""),
                 name=data.get("name", ""),
