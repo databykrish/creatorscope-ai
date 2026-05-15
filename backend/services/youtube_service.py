@@ -258,7 +258,7 @@ class YouTubeService:
             "views": format_number(view_count),
             "views_raw": view_count,
             "video_count": video_count,
-            "niche": self._classify_niche(snippet.get("title", ""), snippet.get("description", "")),
+            "niche": YouTubeService._classify_niche(snippet.get("title", ""), snippet.get("description", "")),
             "engagement": engagement,
             "description": snippet.get("description", ""),
             "thumbnail": snippet.get("thumbnails", {}).get("medium", {}).get("url", ""),
