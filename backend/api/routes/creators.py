@@ -148,7 +148,8 @@ async def search_creators(
     except InvalidSearchQueryError:
         raise
     except Exception as e:
-        logger.error(f"Search error: {str(e)}")
+        import traceback
+        logger.error(f"Search error: {str(e)}\n{traceback.format_exc()}")
         raise InvalidSearchQueryError(f"Search failed: {str(e)}")
 
 
