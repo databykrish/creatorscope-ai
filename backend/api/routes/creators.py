@@ -95,22 +95,24 @@ async def search_creators(
         # Convert to Creator models
         creators = []
         for data in creators_data[:limit]:
-            logger.info(f"DEBUG data type: {type(data)} value: {str(data)[:100]}")
             # Calculate scores
-            recent_videos = await youtube_service.get_recent_videos(data.get("id", ""), max_results=10)
-            upload_dates = [v["published_at"][:10] for v in recent_videos if isinstance(v, dict) and v.get("published_at")]
+            try:
+                recent_videos = await youtube_service.get_recent_videos(data.get("id", ""), max_results=10)
+                upload_dates = [v["published_at"][:10] for v in recent_videos if isinstance(v, dict) and v.get("published_at")]
+            except Exception as video_err:
+                logger.warning(f"Could not fetch recent videos for {data.get('id')}: {video_err}")
+                upload_dates = []
             consistency_score = scoring_service.calculate_upload_consistency(upload_dates)
             engagement_rate = data.get("engagement", 0.0)
             campaign_ready = scoring_service.calculate_campaign_readiness(
                 consistency_score, engagement_rate
             )
-            logger.info(f"DEBUG before ai_summary")
+            
             ai_summary = scoring_service.generate_ai_summary(data)
-            logger.info(f"DEBUG before why_recommended")
             why_recommended = scoring_service.generate_why_recommended(
                 data, {"consistency_score": consistency_score}
             )
-            logger.info(f"DEBUG before Creator()")
+            
             creator = Creator(
                 id=data.get("id", ""),
                 name=data.get("name", ""),
