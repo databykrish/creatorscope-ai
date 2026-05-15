@@ -2,6 +2,13 @@
 
 A production-ready full-stack influencer intelligence and campaign audit platform built with Next.js, FastAPI, and YouTube Data API integration.
 
+## 🌐 Live Deployments
+
+- Frontend Dashboard: [CreatorScope AI](https://ytcreatorscope.vercel.app/)
+- Backend API: [Render Backend](https://creatorscope-ai.onrender.com)
+- API Health Check: [Health Endpoint](https://creatorscope-ai.onrender.com/api/health)
+- Demo Walkthrough: [Watch Demo](https://drive.google.com/file/d/1Y4T37uL9NFJ0WIkvSLsbupI8baGl1I1P/view?usp=drive_link)
+
 ## 🚀 Features
 
 - **Creator Search & Discovery**: Search creators across YouTube, Instagram, TikTok with real-time filtering
