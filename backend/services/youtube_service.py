@@ -245,8 +245,8 @@ class YouTubeService:
 
         # Calculate estimated engagement
         avg_views_per_video = view_count / max(video_count, 1)
-        engagement = round((avg_views_per_video / max(subscriber_count, 1)) * 100, 1) if subscriber_count > 0 else 0.0
-        engagement = min(engagement, 25.0)  # cap at 25% to avoid outlier spikes
+        raw_engagement = (avg_views_per_video / max(subscriber_count, 1)) * 100
+        engagement = round(min(raw_engagement, 10.0), 1) if subscriber_count > 0 else 0.0
 
         return {
             "id": channel_data.get("id", ""),
