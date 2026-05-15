@@ -96,8 +96,10 @@ async def search_creators(
         creators = []
         for data in creators_data[:limit]:
             # Calculate scores
-            consistency_score = scoring_service.calculate_upload_consistency([])
-            engagement_rate = data.get("engagement", 4.5)
+            recent_videos = await youtube_service.get_recent_videos(data.get("id", ""), max_results=10)
+            upload_dates = [v["published_at"][:10] for v in recent_videos if v.get("published_at")]
+            consistency_score = scoring_service.calculate_upload_consistency(upload_dates)
+            engagement_rate = data.get("engagement", 0.0)
             campaign_ready = scoring_service.calculate_campaign_readiness(
                 consistency_score, engagement_rate
             )
@@ -121,7 +123,7 @@ async def search_creators(
                 niche=data.get("niche", "Varied"),
                 aiSummary=ai_summary,
                 whyRecommended=why_recommended,
-                recentPosts=data.get("video_count", 0),
+                recentPosts=len(upload_dates),
                 avgViews=data.get("views", "0"),
             )
             creators.append(creator)
