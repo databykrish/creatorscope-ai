@@ -344,3 +344,8 @@ Verify `ALLOWED_ORIGINS` in backend `.env` includes your frontend URL.
 ## 📄 License
 
 MIT
+
+![Next.js](https://img.shields.io/badge/Next.js-16-black)
+![FastAPI](https://img.shields.io/badge/FastAPI-0.115-green)
+![Vercel](https://img.shields.io/badge/Frontend-Vercel-black)
+![Render](https://img.shields.io/badge/Backend-Render-blue)
