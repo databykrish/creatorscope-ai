@@ -95,6 +95,7 @@ async def search_creators(
         # Convert to Creator models
         creators = []
         for data in creators_data[:limit]:
+            logger.info(f"DEBUG data type: {type(data)} value: {str(data)[:100]}")
             # Calculate scores
             recent_videos = await youtube_service.get_recent_videos(data.get("id", ""), max_results=10)
             upload_dates = [v["published_at"][:10] for v in recent_videos if isinstance(v, dict) and v.get("published_at")]
