@@ -97,7 +97,7 @@ async def search_creators(
         for data in creators_data[:limit]:
             # Calculate scores
             recent_videos = await youtube_service.get_recent_videos(data.get("id", ""), max_results=10)
-            upload_dates = [v["published_at"][:10] for v in recent_videos if v.get("published_at")]
+            upload_dates = [v["published_at"][:10] for v in recent_videos if isinstance(v, dict) and v.get("published_at")]
             consistency_score = scoring_service.calculate_upload_consistency(upload_dates)
             engagement_rate = data.get("engagement", 0.0)
             campaign_ready = scoring_service.calculate_campaign_readiness(
