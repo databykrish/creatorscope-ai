@@ -8,6 +8,7 @@ A production-ready full-stack influencer intelligence and campaign audit platfor
 - Backend API: [Render Backend](https://creatorscope-ai.onrender.com)
 - API Health Check: [Health Endpoint](https://creatorscope-ai.onrender.com/api/health)
 - Demo Walkthrough: [Watch Demo](https://drive.google.com/file/d/1Y4T37uL9NFJ0WIkvSLsbupI8baGl1I1P/view?usp=drive_link)
+- Screenshots: [Screenshot Folder](https://drive.google.com/drive/folders/1pE3ug83dnmmS4b7ECZxCzdwlzLaZUG7j?usp=drive_link)
 
 ## 🚀 Features
 
