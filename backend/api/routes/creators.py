@@ -99,7 +99,7 @@ async def search_creators(
             # Calculate scores
             try:
                 recent_videos = await youtube_service.get_recent_videos(data.get("id", ""), max_results=10)
-                upload_dates = [v["published_at"][:10] for v in recent_videos if isinstance(v, dict) and v.get("published_at")]
+                upload_dates = [{"date": v["published_at"][:10]} for v in recent_videos if isinstance(v, dict) and v.get("published_at")]
             except Exception as video_err:
                 logger.warning(f"Could not fetch recent videos for {data.get('id')}: {video_err}")
                 upload_dates = []
